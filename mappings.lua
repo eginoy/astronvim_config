@@ -25,12 +25,20 @@ return {
 
     -- jj escape mapping
     vim.keymap.set("i", "jj", "<Esc>"),
-    vim.keymap.set("t", "jj", "<C-\\><C-n>", { silent = true }),
 
     ["<leader>a"] = { "<cmd>echo 'Hello World!'<cr>", desc = "Say hello world" },
   },
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
+
+    -- 推奨設定ではjkをマッピングしているがjjの方が慣れているので
+    vim.keymap.set("t", "jj", "<C-\\><C-n>", { silent = true }),
+
+    -- Astronvimのmapping(/lua/astronvim/mappings.lua )で定義されているtoggleterm pluginのキーマップを無効化
+    -- MEMO:Astronvimのデフォルトキーマッピングを書き換えるのではなく、
+    -- ここのユーザー定義ファイルで書き換えてリポジトリで管理することで自身の環境を管理している。
+    ["<C-l>"] = false,
+    ["<C-k>"] = false,
   },
 }
