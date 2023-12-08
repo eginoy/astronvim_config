@@ -10,7 +10,6 @@ return {
   -- launguage pack
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.bash" },
-  { import = "astrocommunity.pack.cs" },
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.lua" },
